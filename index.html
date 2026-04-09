@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Comissão Diária</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Video Player Setup -->
+</head>
+<body>
+    <!-- Top banner -->
+    <div class="top-banner">
+        <p>Oferta acaba em <span class="timer-box" id="min">00</span>:<span class="timer-box" id="sec">00</span></p>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero section reveal">
+        <div class="glow-bg"></div>
+        <div class="container text-center">
+            <h1 class="hero-title">AINDA <span class="text-highlight-red">NÃO</span> BATEU 2 MIL SEGUIDORES?<br>USE O SISTEMA 2K E COMECE A GANHAR <span class="text-highlight-yellow">DINHEIRO</span> NO TIKTOK SHOP AINDA HOJE</h1>
+            <p class="hero-subtitle">A <strong>Inteligência Artificial cria e publica vídeos por você usando +10.700 vídeos prontos</strong> para crescer mais rápido no TikTok.</p>
+            
+            <div class="hero-image-wrapper">
+                <img src="banner.png" alt="Ative os 2.000 seguidores com Inteligência Artificial" class="responsive-img pulse-glow" style="border-radius: 16px;">
+            </div>
+
+            <a href="#oferta" class="btn-primary glow-button">
+                Quero ativar meu TikTok Shop
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron"><path d="m6 9 6 6 6-6"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron delay-1"><path d="m6 9 6 6 6-6"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron delay-2"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Section -->
+    <section class="video-section section reveal">
+        <div class="container container-sm text-center">
+            <h2 class="section-title">Veja como funciona o sistema que ativa seus 2 mil seguidores no <span class="text-gradient">automático</span></h2>
+            <p class="section-subtitle">Assista ao vídeo abaixo e veja como a IA cria e publica os vídeos para você crescer no TikTok sem aparecer.</p>
+            
+            <div class="video-wrapper glass-panel">
+                <!-- Custom VSL Player -->
+                <div class="custom-vsl-player" id="vslPlayerContainer">
+                    <!-- Video in Muted Autoplay Loop by default -->
+                    <video id="vsl-video" autoplay muted loop playsinline preload="auto">
+                        <source src="vsl.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
+                    
+                    <!-- Top Overlay (Hidden when clicked) -->
+                    <div id="vslOverlay" class="vsl-overlay">
+                        <div class="vsl-overlay-content">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="vsl-audio-icon"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                            <h2>Seu vídeo já começou</h2>
+                            <p>Clique para ouvir</p>
+                        </div>
+                    </div>
+
+                    <!-- Center Play/Pause button that briefly appears on subsequent clicks -->
+                    <div id="vslCenterPlay" class="vsl-center-play hidden">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+
+                    <!-- Non-linear Fast/Slow Fake Progress Bar -->
+                    <div id="vslControls" class="vsl-controls hidden">
+                        <div class="vsl-progress-bg" id="vslProgressContainer">
+                            <div class="vsl-progress-fill" id="vslProgressFill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#oferta" class="btn-primary glow-button mt-4">Quero ativar meu TikTok Shop</a>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-track bg-gradient angled-marquee-1">
+            <div class="marquee-content animate-marquee-reverse">
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+            </div>
+        </div>
+        <div class="marquee-track bg-gradient angled-marquee-2">
+            <div class="marquee-content animate-marquee">
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+                <span class="marquee-item">Sistema2K &middot;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section section reveal">
+        <div class="container container-md">
+            <h2 class="section-title text-center">Veja tudo o que você vai <span class="text-gradient">receber hoje</span></h2>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-panel hover-lift">
+                    <div class="feature-text">
+                        <h3>Ativação 2K</h3>
+                        <p>Sistema criado para ajudar você a alcançar os 2 mil seguidores com vídeos publicados automaticamente no seu perfil, sem comprar seguidores e sem precisar fazer tudo manualmente.</p>
+                    </div>
+                    <img src="banner.png" alt="Ativação 2K">
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card glass-panel hover-lift">
+                    <div class="feature-text">
+                        <h3>IA de Vídeos Automáticos</h3>
+                        <p>A inteligência artificial cria e publica vídeos no seu perfil para você crescer com mais consistência sem gravar, editar ou postar por conta própria.</p>
+                    </div>
+                    <img src="substitua.png" alt="IA de Vídeos Automáticos">
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card glass-panel hover-lift">
+                    <div class="feature-text">
+                        <h3>+10.700 Vídeos Prontos</h3>
+                        <p>Biblioteca com mais de 10.700 vídeos organizados por nicho para facilitar sua rotina e acelerar seu crescimento no TikTok.</p>
+                    </div>
+                    <img src="ttkcard04-lZP_rYQk.jpg" alt="+10.700 Vídeos Prontos">
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card glass-panel hover-lift">
+                    <div class="feature-text">
+                        <h3>Vitrine Lucrativa</h3>
+                        <p>Acesso a uma vitrine com produtos que mais vendem no TikTok Shop para você divulgar com mais clareza e menos tempo perdido escolhendo produto.</p>
+                    </div>
+                    <img src="ttkcard03-DuhlFx7-.jpg" alt="Vitrine Lucrativa">
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card glass-panel hover-lift">
+                    <div class="feature-text">
+                        <h3>Treinamento TikTok Shop</h3>
+                        <p>Passo a passo simples mostrando como configurar o sistema, ativar os 2 mil seguidores e começar a estruturar sua conta.</p>
+                    </div>
+                    <img src="ttkcard05-CkdySMWv.jpg" alt="Treinamento TikTok Shop">
+                </div>
+            </div>
+            
+            <a href="#oferta" class="btn-primary glow-button mt-5 mx-auto w-full max-w-sm block text-center">Quero ativar meu TikTok Shop</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section reveal bg-dark gradient-overlay">
+        <div class="container container-lg text-center relative z-10">
+            <div class="testimonial-header">
+                <img src="depoimentosicon-QCxVO89b.png" alt="Afiliadas usando o Sistema2K" class="user-avatars">
+                <p><strong>+ 10 mil afiliadas</strong> já estão usando o Sistema2K</p>
+            </div>
+            <h2 class="section-title text-light mb-8">Veja os resultados de quem já ativou<br><span class="text-gradient">os 2K seguidores</span></h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-img-wrapper animate-slide-up">
+                    <img src="depoimento-1-CLZ7oQSC.png" alt="Depoimento 1">
+                </div>
+                <div class="testimonial-img-wrapper animate-slide-up delay-1">
+                    <img src="depoimento-2-CyRPAa8b.png" alt="Depoimento 2">
+                </div>
+                <div class="testimonial-img-wrapper animate-slide-up delay-2">
+                    <img src="/assets/depoimento-3-B97-AOfH.png" alt="Depoimento 3" onerror="this.src='https://images.unsplash.com/photo-1611162618828-bcbc08d2d6c1?q=80&w=600&auto=format&fit=crop'">
+                </div>
+            </div>
+
+            <!-- Target Audience Box -->
+            <div class="target-audience-box glass-panel gradient-border mt-5 text-left mx-auto">
+                <p class="overline">Para Quem É</p>
+                <h3>Esse sistema foi criado para afiliadas que:</h3>
+                <ul class="check-list">
+                    <li>
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>ainda não alcançaram os 2 mil seguidores</span>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>querem começar no TikTok Shop</span>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>não querem aparecer nos vídeos</span>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>estão cansadas de postar manualmente</span>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>querem crescer com vídeos automáticos e constância</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="#oferta" class="btn-primary glow-button mt-5 mx-auto w-full max-w-sm block">Quero ativar meu TikTok Shop</a>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="oferta" class="offer-section section reveal bg-darkest">
+        <div class="container container-sm">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-light">Chegou a sua hora de ativar seus 2K seguidores e começar no TikTok Shop</h2>
+                <p class="section-subtitle">Aproveite a condição especial de hoje e receba acesso imediato a tudo isso:</p>
+            </div>
+            
+            <div class="pricing-card-wrapper gradient-border-anim pulse-glow">
+                <div class="pricing-card inner-glass">
+                    <img src="capaofertattk-BUkkM1K0.jpg" alt="Sistema2K - Oferta" class="pricing-hero-img">
+                    <h3 class="pricing-title">Sistema2K</h3>
+                    
+                    <ul class="pricing-features">
+                        <li><div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></div>Ativação dos 2 mil seguidores</li>
+                        <li><div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></div>IA que cria e posta por você</li>
+                        <li><div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></div>+10.700 vídeos prontos</li>
+                        <li><div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></div>Vitrine lucrativa</li>
+                        <li><div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg></div>Treinamento completo</li>
+                    </ul>
+
+                    <div class="pricing-price-box">
+                        <p class="original-price">De R$97,45</p>
+                        <p class="current-price">R$17,90</p>
+                        <p class="price-note">pagamento único</p>
+                    </div>
+
+                    <a href="https://ggcheckout.app/checkout/v2/CAmx3kpKvs8OV2JE9AIJ" class="btn-primary btn-purchase shimmer-effect text-center block">Comprar agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section section text-center">
+        <div class="container container-sm reveal">
+            <img src="selo-garantia-gold-D9irgRg0.png" alt="Selo de garantia de 7 dias" class="guarantee-seal float-anim">
+            <h2 class="section-title">Garantia de <span class="text-gradient">7 dias</span></h2>
+            <p class="text-light-muted">Se por qualquer motivo você não estiver satisfeito com o sistema, basta solicitar o reembolso dentro de 7 dias. Você recebe <strong>100% do seu dinheiro de volta, sem perguntas ou burocracias.</strong></p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section reveal bg-light">
+        <div class="container container-sm">
+            <div class="text-center mb-5">
+                <p class="overline text-gradient">[ TIRE SUAS DÚVIDAS ]</p>
+                <h2 class="section-title text-dark">Perguntas Frequentes</h2>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Preciso aparecer para usar o sistema?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Não, todo o processo é feito sem que você precise mostrar o rosto ou gravar sua voz. A IA e os vídeos da biblioteca fornecem tudo que você precisa.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Funciona pelo celular?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Sim, o sistema e o treinamento foram desenvolvidos para que você consiga configurar e utilizar 100% através do seu celular.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Preciso saber editar vídeos?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Não. Você terá acesso aos vídeos prontos e a inteligência artificial também trabalhará para você de forma automática.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Como recebo acesso?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Assim que o pagamento for aprovado, seu acesso é liberado imediatamente.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Os vídeos já vêm prontos?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Sim. Você recebe mais de 10.700 vídeos prontos e organizados por nicho.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        A IA posta em qual rede?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>A IA publica no TikTok de forma automática para ajudar você a crescer e bater os 2 mil seguidores.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Os seguidores são reais?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Sim. O sistema não compra seguidores. Os seguidores vêm através do alcance dos vídeos publicados no TikTok.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Como funciona a garantia?
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Você tem 7 dias de garantia. Se não gostar, basta solicitar o reembolso dentro do prazo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Sistema2K &middot; Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
